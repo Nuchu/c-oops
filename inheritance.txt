@@ -1,0 +1,30 @@
+using System;
+namespace one
+{
+public class animal
+{
+	public  void eat()
+	{
+		Console.WriteLine("This animal can eat");
+	}
+	
+}
+public class dog:animal
+{
+	public void bark()
+	{
+		Console.WriteLine("This animal can bark");
+	}
+}
+public class program
+{
+	public static void Main(string[]args)
+	{
+		dog obj=new dog();
+		Console.WriteLine("The output with dog class:");
+		obj.eat();
+		obj.bark();
+	}
+}
+}
+		

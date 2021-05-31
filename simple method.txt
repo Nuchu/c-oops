@@ -1,0 +1,34 @@
+using System;
+namespace one
+{
+public class Student
+{
+	public int student_rollnumber;
+	public string student_name;
+	
+	public void getstudentdetails()
+	{
+		Console.WriteLine("Enter the student number");
+		student_rollnumber=Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("enter the name of the student:");
+		student_name=Console.ReadLine();
+	}
+	public void printstudentdetails()
+	{
+		Console.WriteLine("Student details are:");
+		Console.WriteLine("Student rollnumber is:"+student_rollnumber);
+		Console.WriteLine("student name is:"+student_name);
+	}
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+		Student obj1=new Student();
+		obj1.getstudentdetails();
+		obj1. printstudentdetails();
+	}
+		
+}
+}
+		

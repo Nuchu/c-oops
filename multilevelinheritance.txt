@@ -1,0 +1,47 @@
+using System;
+namespace one
+{
+public class shape
+{
+	public  void shapeofobject()
+	{
+		Console.WriteLine("This is a shape");
+	}
+	
+}
+public class rectangle:shape
+{
+	public void area()
+	{
+		int length,breadth;
+		Console.WriteLine("enter the length of the rectangle:");
+		length=Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("enter the breadth of the rectangle:");
+		breadth=Convert.ToInt32(Console.ReadLine());
+		int area=2*(length+breadth);
+		Console.WriteLine("Arae of the rectangle is :"+area);
+	}
+}
+public class square:rectangle
+{
+	public void areaofsquare()
+	{
+		int side;
+		Console.WriteLine("enter the side of the square:");
+		side=Convert.ToInt32(Console.ReadLine());
+		int area=side*side;
+		Console.WriteLine("area of the square is:"+area);
+	}
+}
+public class program
+{
+	public static void Main(string[]args)
+	{
+		square obj=new square();
+		obj.shapeofobject();
+		obj.area();
+		obj.areaofsquare();
+	}
+}
+}
+		

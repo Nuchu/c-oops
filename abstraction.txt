@@ -1,0 +1,41 @@
+using System;
+namespace one
+{
+public abstract class wholeseller
+{
+	public abstract void discount();
+	public int price;
+	public void getpricefromwholeseller()
+	{
+		Console.WriteLine("Enter the price:");
+		price=Convert.ToInt32(Console.ReadLine());
+	}
+	
+	public void display()
+	{
+		Console.WriteLine("This statement is inside wholesellerclass");
+	}
+}
+public class retailer:wholeseller
+{
+	public override void discount()
+	{
+		int disountamount;
+		disountamount=price-(price/10);
+		Console.WriteLine("The discount amount is:"+disountamount);
+	}
+}
+	
+public class program
+{
+	public static void Main(string[]args)
+	{
+		retailer obj=new retailer();
+		obj.getpricefromwholeseller();
+		obj.discount();
+		obj.display();
+		
+	}
+}
+}
+		
