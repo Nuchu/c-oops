@@ -1,0 +1,38 @@
+using System;
+namespace hi
+{
+	public abstract class animal
+	{
+		public string name;
+		public string setname(string name)
+		{
+			return name;
+		}
+		public void getname()
+		{
+			this.name=name;
+			Console.WriteLine("hi this statemnet is inside getname functon");
+		}
+		public abstract void eat();
+	}
+	public class dog:animal
+	{
+		public override void eat()
+		{
+			Console.WriteLine("The dpg is eating");
+		}
+	}
+	public class test
+	{
+		public static void Main(string[]args)
+		{
+		dog obj=new dog();
+		Console.WriteLine("enter a dog name:");
+		obj.name=Console.ReadLine();
+		obj.getname();
+		obj.eat();
+		
+		}
+		
+	}
+}
