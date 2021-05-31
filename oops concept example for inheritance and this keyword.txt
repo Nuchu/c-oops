@@ -1,0 +1,54 @@
+using System;
+namespace one
+{
+public class person
+{
+	public int age;
+	public void greet()
+	{
+		string greeting;
+		Console.WriteLine("Enter the greeting:");
+		greeting=Console.ReadLine();
+	}
+	public void setage(int age)
+	{
+		Console.WriteLine("Enter the age:");
+		this.age=Convert.ToInt32(Console.ReadLine());
+	}
+}
+public class student:person
+{
+	public void study()
+	{
+		Console.WriteLine("Iam studying on the screen");
+	}
+	public void showage()
+	{
+		Console.WriteLine("My age is"+age+"years old");
+	}
+}
+public class teacher:person
+{
+	public void explain()
+	{
+		Console.WriteLine("I am explainng on the screen");
+	}
+}
+public class studentprofessortest
+{
+	public static void Main(string[]args)
+	{
+		person objperson=new person();
+		objperson.greet();
+		student objstudent=new student();
+		objstudent.setage(20);
+		objstudent.greet();
+		objstudent.showage();
+		teacher objteacher=new teacher();
+		objteacher.setage(31);
+		objteacher.greet();
+		objteacher.explain();
+	}
+}
+}
+		
