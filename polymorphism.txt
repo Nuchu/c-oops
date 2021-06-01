@@ -1,0 +1,32 @@
+using System;
+namespace hi
+{
+	public class polymorphism
+	{
+		int a=10,b=20;
+		public void product()
+		{
+			Console.WriteLine("the product of these two values are:"+(a*b));
+		}
+		public int product(int a,int b)
+		{
+			return (a*b);
+		}
+		public void product(int a,int b,int c)
+		{
+			Console.WriteLine("the product of three numbers is:"+(a*b*c));
+		}
+		public void product(string a, string b)
+		{
+			Console.WriteLine("the product of the strings are:"+(Convert.ToInt32(a)*Convert.ToInt32(b)));
+		}
+		public static void Main(string[]args)
+		{
+			polymorphism obj=new polymorphism();
+			obj.product();
+			Console.WriteLine(obj.product(10,30));
+			obj.product("1","2");
+			obj.product(2,3,4);
+		}
+	}
+}
