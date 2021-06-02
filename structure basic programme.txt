@@ -1,0 +1,21 @@
+using System;
+namespace structure
+{
+	public struct student
+	{
+		public int rollnumber;
+		public string studentname;
+		public int totalmarks;
+	}
+	public class main
+	{
+		public static void Main(string[]args)
+		{
+			student s1;
+			s1.rollnumber=1;
+			s1.studentname="nusi";
+			s1.totalmarks=100;
+			Console.WriteLine(" "+s1.rollnumber+" "+s1.studentname+" "+s1.totalmarks);
+		}
+	}
+}

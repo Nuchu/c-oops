@@ -1,0 +1,38 @@
+using System;
+					
+public class Program
+{
+	public enum gender
+	{
+		male,female,trans
+	}
+	public static void Main(string[]args)
+	{
+		string a;int b;
+		Console.WriteLine("enter your name:");
+		a=Console.ReadLine();
+		Console.WriteLine("enter your age:");
+		b=Convert.ToInt32(Console.ReadLine());
+		foreach (var item in Enum.GetValues(typeof(gender)))
+            {
+                Console.WriteLine(((int)item) + "  " + item);
+            }
+		Console.WriteLine("select your gender:");
+		int choice=Convert.ToInt32(Console.ReadLine());
+		switch(choice)
+		{
+			case (int)gender.female:
+				Console.WriteLine("Name  \t\t Age  \t\t gender ");
+				Console.WriteLine(a+"\t\t\t "+b+"\t\t\t female");
+				break;
+			case (int)gender.male:
+				Console.WriteLine("Name  \t\t Age  \t\t gender ");
+				Console.WriteLine(a+"\t\t\t "+b+"\t\t\tmale");
+				break;
+			case (int)gender.trans:
+				Console.WriteLine("Name  \t\t Age  \t\t gender ");
+				Console.WriteLine(a+"\t\t\t"+b+"\t\t\t trans");
+				break;
+		}
+	}
+}
