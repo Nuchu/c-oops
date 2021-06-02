@@ -1,0 +1,52 @@
+using System;
+namespace wednesday
+{
+	public class main
+	{
+		public static void Main(string[]args)
+		{
+			
+			string[] names=new string[10];
+			int[] rollnumbers=new int[10];
+			int[] totalmarks=new int[10];
+			for(int i=0;i<2;i++)
+			{
+				Console.WriteLine("enter the name of the student:");
+				names[i]=Console.ReadLine();
+				Console.WriteLine("enter the roll number of the student:");
+				rollnumbers[i]=Convert.ToInt32(Console.ReadLine());
+				Console.WriteLine("enter the totalmarks of the student:");
+				totalmarks[i]=Convert.ToInt32(Console.ReadLine());
+			}
+			
+			Console.WriteLine("studentname   \t  rollnumber   \t   totalmarks  \t\t   gradeobtained");
+			for(int k=0;k<2;k++)
+			{
+				string grade;
+				int percentage=(totalmarks[k]*100)/500;
+				if(percentage>50 && percentage<=60)
+				{
+					grade="C";
+				}
+				else if(percentage>60 && percentage<=80)
+				{
+					grade="B";
+				}
+				else if(percentage>80 && percentage<=90)
+				{
+					grade="A";
+				}
+				else if(percentage>90 && percentage<=100)
+				{
+					grade="OS";
+				}
+				else
+				{
+					grade="fail";
+				}
+				Console.WriteLine(" "+names[k]+" \t\t\t\t"+rollnumbers[k]+"\t\t\t\t\t "+totalmarks[k]+"\t\t\t\t\t"+grade);
+			}
+		
+		}
+	}
+}
